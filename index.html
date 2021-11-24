@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Memory Store</title>
+	<script src="./index.js"></script>
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link href="./app.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<h1 class="grid place-items-center text-5xl primary-background py-6 font-bold">
+		Memory Store
+	</h1>
+	<div class="container mx-auto px-4">
+		<div class="grid place-items-center py-6">
+			<form class='grid grid-flow-row lg:grid-flow-col gap-y-4' onsubmit="formSubmit(event)">
+				<input class="border-1 p-2 lg:mr-3" placeholder="Memory Name" name='reminderName' required
+					onchange="onInputChange(event)" />
+				<input class="border-1 p-2 lg:mr-3" type='date' name='reminderDate' required
+					onchange="onInputChange(event)" />
+				<button class="secondary-background border-1 p-2 px-8" type="submit"
+					class='btn btn-primary'>ADD</button>
+			</form>
+		</div>
+		<div id='reminder-display' class="grid lg:grid-cols-3 gap-6 grid-cols-1">
+
+		</div>
+		<template id='reminder-template'>
+			<div class="memory-card  bg-red-400 rounded-xl p-4 gap-4">
+				<div class='name'></div>
+				<div class='date'></div>
+				<div class='anniversary primary-background rounded-xl '>
+				<div class='flex justify-center items-center m-auto'>Next Anniversary</div>
+					<div
+						class="anniversary-days flex justify-center items-center m-auto  ">
+					</div>
+				</div>
+				<div class='count-area primary-background rounded-xl'>
+				<div class='flex justify-center items-center m-auto'>Total</div>
+					<div class='noofdays m-auto flex justify-center items-center'>
+					</div>
+				</div>
+			</div>
+		</template>
+	</div>
+</body>
+
+</html>

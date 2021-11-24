@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+    --color-1: rgb(72, 52, 52);
+    --color-2: rgb(107, 79, 79);
+    --color-3: rgb(238, 214, 196);
+    --color-4: rgb(255, 243, 228);
+}
+*{
+    font-family: 'Roboto', sans-serif !important;
+}
+.memory-card {
+    background-color: var(--color-3);
+    color: var(--color-1);
+    display: grid;
+    grid-template-areas: 
+    "name-area date-area"
+    "count-area anniversary";
+}
+.border-1{
+    border: 1px solid var(--color-2);
+    border-radius: 3px;
+}
+.border-b-1{
+border-bottom: 1px solid var(--color-2) ;
+border-radius: 3px;
+}
+
+.primary-background{
+    background-color: var(--color-1);
+    color: var(--color-4);
+}
+.secondary-background{
+    color: var(--color-1);
+    background-color: var(--color-3);
+}
+.name{
+    grid-area: name-area;
+}
+.date{
+	grid-area: date-area;
+}
+.anniversary{
+    grid-area: anniversary;
+}
+.count-area{
+    grid-area: count-area;
+}
